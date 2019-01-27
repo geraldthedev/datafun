@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/hakeem1106/datafun#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.7",
     "node": "^11.8.0",
