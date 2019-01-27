@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/hakeem1106/datafun/issues"
   },
-  "homepage": "https://github.com/hakeem1106/datafun#readme"
+  "homepage": "https://github.com/hakeem1106/datafun#readme",
+  "dependencies": {
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.7",
+    "node": "^11.8.0",
+    "nodejs": "0.0.0"
+  }
 }
