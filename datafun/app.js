@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
+var people = require('./models/people');
 
 
 var indexRouter = require('./routes/index');
@@ -13,10 +14,19 @@ var app = express();
 
 mongoose.connect('mongodb://gbryant:'+ process.env.MONGO_PASS + '@cluster0-shard-00-00-xutke.gcp.mongodb.net:27017,cluster0-shard-00-01-xutke.gcp.mongodb.net:27017,cluster0-shard-00-02-xutke.gcp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', {useNewUrlParser:true});
 
+mongoose.once('open', function(){
+    console.log('connected');
+});
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+app.get('/', function(req, res){
+    
+});
 
 app.use(logger('dev'));
 app.use(express.json());
